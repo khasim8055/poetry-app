@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poetry App</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Poetry App</h1>
+    <p>Explore and share your poems with the world.</p>
+  </header>
+
+  <main>
+    <section id="poem-list">
+      <h2>Recent Poems</h2>
+      <ul>
+        <% poems.forEach(poem => { %>
+          <li>
+            <a href="<%= poem.file %>" target="_blank"><%= poem.title %></a>
+            by <a href="/profile/<%= poem.author %>"><%= poem.author %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <a href="/publish" class="publish-button">Publish Your Poem</a>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  </main>
+
+  <footer>
+    <p>Created with ❤️ by [Your Name]</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= author %>'s Profile</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1><%= author %>'s Poems</h1>
+  </header>
+
+  <main>
+    <ul>
+      <% poems.forEach(poem => { %>
+        <li>
+          <a href="<%= poem.file %>" target="_blank"><%= poem.title %></a>
+        </li>
+      <% }) %>
+    </ul>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  </main>
+
+  <footer>
+    <p><a href="/">Back to Home</a></p>
+  </footer>
+</body>
+</html>
